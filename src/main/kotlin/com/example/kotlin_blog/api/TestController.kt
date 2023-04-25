@@ -1,4 +1,4 @@
-package com.example.fact_api_refactor_kotlin.api
+package com.example.kotlin_blog.api
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController

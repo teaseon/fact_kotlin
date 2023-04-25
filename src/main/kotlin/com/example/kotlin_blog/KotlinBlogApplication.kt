@@ -1,11 +1,11 @@
-package com.example.fact_api_refactor_kotlin
+package com.example.kotlin_blog
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class FactApiRefactorKotlinApplication
+class KotlinBlogApplication
 
 fun main(args: Array<String>) {
-    runApplication<FactApiRefactorKotlinApplication>(*args)
+    runApplication<KotlinBlogApplication>(*args)
 }

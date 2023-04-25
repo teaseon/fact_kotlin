@@ -8,7 +8,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/fact_kotlin?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mariadb://localhost:3306/kotlin_blog?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8
     username: test
     password: 1234
   jpa:

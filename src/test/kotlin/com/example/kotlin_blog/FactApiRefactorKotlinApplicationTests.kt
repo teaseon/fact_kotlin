@@ -1,4 +1,4 @@
-package com.example.fact_api_refactor_kotlin
+package com.example.kotlin_blog
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

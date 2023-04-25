@@ -1,6 +1,6 @@
-package com.example.fact_api_refactor_kotlin.domain.member
+package com.example.kotlin_blog.domain.member
 
-import com.example.fact_api_refactor_kotlin.domain.AuditingEntity
+import com.example.kotlin_blog.domain.AuditingEntity
 import jakarta.persistence.*
 
 @Entity

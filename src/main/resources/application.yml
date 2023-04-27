@@ -21,12 +21,8 @@ spring:
       hibernate:
         default_batch_fetch_size: 1000
         globally_quoted_identifiers: true
-#        format_sql: true
-    show-sql: false # 쿼리 로그에 보여주기
-  output:
-    ansi:
-      enabled: always
+    show-sql: false # log4j sql쿼리 로그에 보여주기
 decorator:
   datasource:
     p6spy:
-      enable-logging: true # 쿼리 로그 마킹 제거, 상용 false, 개발환경 true
+      enable-logging: true # sql쿼리 로그 마킹 제거, 상용 false, 개발환경 true

@@ -26,7 +26,7 @@ class InitData (
     @EventListener(ApplicationReadyEvent::class)
     private fun init(){
 
-            log.info {"insert %%%%%%%%%%%%%%%%%%%%%%%%%%%%"}
+
 //        val members = mutableListOf<Member>()
 //        val posts = mutableListOf<Post>()
 //        for(i in 1..100){

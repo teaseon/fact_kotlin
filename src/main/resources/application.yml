@@ -13,7 +13,7 @@ spring:
     password: 1234
   jpa:
     hibernate:
-      ddl-auto: create # 서버 켤때 데이터베이스에 새로 만들어주기
+      ddl-auto: update # 서버 켤때 데이터베이스에 새로 만들어주기
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     open-in-view: false
@@ -23,8 +23,7 @@ spring:
         globally_quoted_identifiers: true
     show-sql: true # 쿼리 로그에 보여주기
 
-
-decorator:
-  datasource:
-    p6spy:
-      enable-logging: true
+#  decorator:
+#    datasource:
+#      p6spy:
+#        enable-logging: true

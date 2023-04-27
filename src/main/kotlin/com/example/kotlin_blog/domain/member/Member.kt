@@ -22,7 +22,26 @@ class Member (
     @Enumerated(EnumType.STRING)
     var role:Role = role
         protected set
+
+    override fun toString(): String {
+        return "Member(id=$id, email=$email, password=$password, role=$role)"
+    }
+
+    companion object {
+        fun createFakeMember(memberId:Long): Member {
+            val member = Member(" ", " ", Role.USER)
+            member.id = memberId
+            return member
+        }
+    }
 }
+
+fun Member.toDto() : MemberRes = MemberRes(
+    id = this.id!!,
+    email = this.email,
+    password = this.password,
+    role = this.role
+)
 
 enum class Role {
     USER, ADMIN

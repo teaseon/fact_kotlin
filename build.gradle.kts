@@ -16,7 +16,7 @@ allOpen {
     annotation("javax.persistence.MappedSuperclass")
 }
 
-group = "com.example"
+group = "com.example.kotlin_blog"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
@@ -31,6 +31,16 @@ dependencies {
     implementation("io.github.serpro69:kotlin-faker:1.14.0")
 // https://mvnrepository.com/artifact/com.github.gavlyukovskiy/p6spy-spring-boot-starter
     implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.7.1")
+
+// https://mvnrepository.com/artifact/com.linecorp.kotlin-jdsl/spring-data-kotlin-jdsl-starter
+    implementation("com.linecorp.kotlin-jdsl:spring-data-kotlin-jdsl-starter:2.0.4.RELEASE")
+
+//    // https://mvnrepository.com/artifact/com.linecorp.kotlin-jdsl/spring-data-kotlin-jdsl-autoconfigure
+//    implementation("com.linecorp.kotlin-jdsl:spring-data-kotlin-jdsl-autoconfigure:2.0.4.RELEASE")
+//
+//// https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
+//    implementation("javax.persistence:javax.persistence-api:2.2")
+
 
 
 

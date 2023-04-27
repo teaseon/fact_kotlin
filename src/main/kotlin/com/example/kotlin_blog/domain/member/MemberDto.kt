@@ -5,6 +5,13 @@ data class MemberSaveReq(
     val password:String,
     val role:Role
 )
+
+data class MemberRes(
+    val id:Long,
+    val email:String,
+    val password:String,
+    val role:Role
+)
 fun MemberSaveReq.toEntity(): Member {
     return Member(
         email = this.email,
@@ -12,3 +19,4 @@ fun MemberSaveReq.toEntity(): Member {
         role = this.role
     )
 }
+

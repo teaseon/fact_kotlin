@@ -30,10 +30,18 @@ dependencies {
     // https://mvnrepository.com/artifact/io.github.serpro69/kotlin-faker
     implementation("io.github.serpro69:kotlin-faker:1.14.0")
 // https://mvnrepository.com/artifact/com.github.gavlyukovskiy/p6spy-spring-boot-starter
-    implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.7.1")
+    implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0")
+
 
 // https://mvnrepository.com/artifact/com.linecorp.kotlin-jdsl/spring-data-kotlin-jdsl-starter-jakarta
     implementation("com.linecorp.kotlin-jdsl:spring-data-kotlin-jdsl-starter-jakarta:2.2.1.RELEASE")
+
+//    // https://mvnrepository.com/artifact/io.github.microutils/kotlin-logging-jvm
+//    runtimeOnly("io.github.microutils:kotlin-logging-jvm:3.0.4")
+    // https://mvnrepository.com/artifact/io.github.microutils/kotlin-logging
+    implementation("io.github.microutils:kotlin-logging:3.0.5")
+
+
 
 
 

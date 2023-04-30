@@ -1,9 +1,8 @@
 package com.example.kotlin_blog.service
 
-import com.example.kotlin_blog.domain.member.Member
-import com.example.kotlin_blog.domain.member.MemberRepository
-import com.example.kotlin_blog.domain.member.MemberRes
-import com.example.kotlin_blog.domain.member.toDto
+import com.example.kotlin_blog.domain.member.*
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -12,10 +11,24 @@ class MemberService(
     private val memberRepository: MemberRepository
 ) {
     @Transactional(readOnly = true)
-    fun findAll(): List<MemberRes> =
-        memberRepository.findMembers().map {
-            it.toDto()
-        }
+    fun findAll(pageable: Pageable): Page<MemberRes> = memberRepository.findMembers(pageable).map { it.toDto() }
+
+    @Transactional
+    fun findById(id:Long): MemberRes = memberRepository.findById(id).orElseThrow().toDto()
+
+
+    @Transactional
+    fun deleteMemberById(id: Long) = memberRepository.deleteById(id)
+
+
+    @Transactional
+    fun saveMember(dto: MemberSaveReq) = memberRepository.save(dto.toEntity())
+
+
+//    @Transactional
+//    fun modifyMember(){
+//        memberRepository.
+//    }
 
 
 }

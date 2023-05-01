@@ -1,6 +1,7 @@
 package com.example.kotlin_blog.service
 
 import com.example.kotlin_blog.domain.member.*
+import com.example.kotlin_blog.exception.MemberNotFoundException
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
@@ -14,7 +15,11 @@ class MemberService(
     fun findAll(pageable: Pageable): Page<MemberRes> = memberRepository.findMembers(pageable).map { it.toDto() }
 
     @Transactional
-    fun findById(id:Long): MemberRes = memberRepository.findById(id).orElseThrow().toDto()
+    fun findById(id:Long): MemberRes = memberRepository
+        .findById(id)
+        .orElseThrow{
+            throw MemberNotFoundException(id)
+        }.toDto()
 
 
     @Transactional

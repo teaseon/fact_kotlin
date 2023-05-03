@@ -27,7 +27,9 @@ class MemberCustomRepositoryImpl (
 ) : MemberCustomRepository {
 
 
-    override fun findMembers (pageable: Pageable): Page<Member> {
+    override fun findMembers (pageable: Pageable)
+    : Page<Member> {
+
         val memberPage = queryFactory.listQuery<Member> {
             select(entity(Member::class))
             from(entity(Member::class))

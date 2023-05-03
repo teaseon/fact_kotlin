@@ -13,7 +13,7 @@ spring:
     password: 1234
   jpa:
     hibernate:
-      ddl-auto: create # 서버 켤때 데이터베이스에 새로 만들어주기 create, 기존에 있어 만들어줄 필요 없다면 update
+      ddl-auto: update # 서버 켤때 데이터베이스에 새로 만들어주기 create, 기존에 있어 만들어줄 필요 없다면 update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     open-in-view: false

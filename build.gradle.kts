@@ -8,6 +8,7 @@ plugins {
     kotlin("jvm") version "1.7.22"
     kotlin("plugin.spring") version "1.7.22"
     kotlin("plugin.jpa") version "1.7.22"
+    kotlin("kapt") version "1.7.10"
 }
 
 allOpen {
@@ -44,6 +45,22 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging:3.0.5")
     // logback으로 설정
 
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop
+    implementation("org.springframework.boot:spring-boot-starter-aop:3.0.4")
+    // aop
+
+//    // https://mvnrepository.com/artifact/com.querydsl/querydsl-jpa
+//    implementation("com.querydsl:querydsl-jpa:5.0.0")
+//    // querydsl
+//
+//    // https://mvnrepository.com/artifact/com.querydsl/querydsl-apt
+//    kapt("com.querydsl:querydsl-apt:5.0.0:jpa")
+//    // querydsl apt
+//
+//    // https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
+//    implementation("javax.persistence:javax.persistence-api:2.2")
+//    // javax
+//    kapt("org.springframework.boot:spring-boot-configuration-processor")
 
 
 

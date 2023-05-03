@@ -26,19 +26,19 @@ class InitData (
     @EventListener(ApplicationReadyEvent::class)
     private fun init(){
 
-
-        val members = mutableListOf<Member>()
-        val posts = mutableListOf<Post>()
-        for(i in 1..100){
-            val member = generateMember()
-            members.add(member)
-
-            val post = generatePost()
-            posts.add(post)
-
-        }
-        memberRepository.saveAll(members)
-        postRepository.saveAll(posts)
+//
+//        val members = mutableListOf<Member>()
+//        val posts = mutableListOf<Post>()
+//        for(i in 1..100){
+//            val member = generateMember()
+//            members.add(member)
+//
+//            val post = generatePost()
+//            posts.add(post)
+//
+//        }
+//        memberRepository.saveAll(members)
+//        postRepository.saveAll(posts)
     }
 
     private fun generateMember(): Member = MemberSaveReq(

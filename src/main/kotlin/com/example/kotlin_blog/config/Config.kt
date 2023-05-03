@@ -5,10 +5,12 @@ import com.p6spy.engine.spy.P6SpyOptions
 import com.p6spy.engine.spy.appender.MessageFormattingStrategy
 import jakarta.annotation.PostConstruct
 import org.hibernate.engine.jdbc.internal.FormatStyle
+import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 
 @Configuration
@@ -18,6 +20,14 @@ class LoggingConfig {
     fun setLogMessageFormat() {
         P6SpyOptions.getActiveInstance().logMessageFormat = P6spyPrettySqlFormatter::class.java.name
     }
+//
+//    @PersistenceContext
+//    lateinit var entityManager: EntityManager
+//
+//    @Bean
+//    fun jpaQueryFactory() : JPAQueryFactory {
+//        return JPAQueryFactory(entityManager)
+//    }
 }
 
 

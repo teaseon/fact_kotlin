@@ -1,6 +1,7 @@
 package com.example.kotlin_blog.domain.member
 
 import com.example.kotlin_blog.domain.AuditingEntity
+import com.example.kotlin_blog.domain.post.Post
 import jakarta.persistence.*
 
 @Entity
@@ -22,6 +23,9 @@ class Member (
     @Enumerated(EnumType.STRING)
     var role:Role = role
         protected set
+
+    @OneToMany(mappedBy = "member", targetEntity = Post::class)
+    var posts = mutableListOf<Post>()
 
     override fun toString(): String {
         return "Member(id=$id, email=$email, password=$password, role=$role)"

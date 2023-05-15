@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 
-@RequestMapping("/member")
+@RequestMapping("/api")
 @RestController
 class MemberController (
     private val memberService: MemberService

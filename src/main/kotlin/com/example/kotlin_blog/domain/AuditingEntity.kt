@@ -12,7 +12,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener
 import java.io.Serializable
 import java.time.LocalDateTime
 
-@EntityListeners(value = [AuditingEntityListener::class])
+@EntityListeners(AuditingEntityListener::class)
 @MappedSuperclass
 abstract class AuditingEntity(): AuditingEntityId() {
     @CreatedDate

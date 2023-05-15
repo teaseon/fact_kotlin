@@ -14,7 +14,7 @@ class PostService (
 ) {
 
     @Transactional(readOnly = true)
-    fun findAll(pageable: Pageable): Page<PostRes> = postRepository.findAll(pageable).map { it.toDto() }
+    fun findAll(pageable: Pageable): Page<PostRes> = postRepository.findPosts(pageable).map { it.toDto() }
 
     @Transactional
     fun findById(id: Long) = postRepository.findById(id)
